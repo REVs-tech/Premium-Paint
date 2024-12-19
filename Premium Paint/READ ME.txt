@@ -1,0 +1,16 @@
+Drawing in the Browser
+How to Use
+Here's how to get started with this browser-based painting application:
+
+    Extract the Zip File: 
+        Download the project zip file.
+        Extract all contents to a folder on your computer.
+    Open the Index File: 
+        Navigate to the folder where you extracted the files.
+        Open the index.html file with your preferred web browser.
+
+
+Usage Rights
+This project is fully open-source and free to use in your own projects, websites, games, or for any other creative endeavors. However, we kindly ask that you credit Studio Revival & Project:REV if you incorporate this software into your work.
+
+Enjoy drawing, experimenting, and creating with this simple tool!

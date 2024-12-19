@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Paint</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="center-container">
+        <img src="Icons/Icon_Logo.png" alt="Premium Paint Logo" class="logo">
+        
+        <div class="toolbar">
+            <button id="pencilBtn"><img src="Icons/Icon_Pencil.png" alt="Pencil"></button>
+            <button id="brushBtn"><img src="Icons/Icon_Brush.png" alt="Brush"></button>
+            <input type="range" id="brushSize" min="1" max="50" value="5">
+            <input type="color" id="colorPicker" style="margin-left: 10px;" value="#000000"> 
+            <div class="color-picker-container" style="margin-left: 10px;">
+                <canvas id="colorWheel" width="60" height="60"></canvas>
+            </div>
+            <label for="fillColor" style="margin-left: 10px;">Fill:</label> 
+            <input type="checkbox" style="margin-right: 10px;" id="fillColor">
+            <button id="shapeBtn"><img src="Icons/Shape_Icon_Square.png" alt="Shape"></button>
+            <div class="select-wrapper">
+                <select id="shapeSelect">
+                    <option value="circle" data-icon="Icons/Shape_Icon_Circle.png">Circle</option>
+                    <option value="rectangle" data-icon="Icons/Shape_Icon_Square.png">Rectangle</option>
+                    <option value="star" data-icon="Icons/Shape_Icon_Star.png">Star</option>
+                    <option value="oval" data-icon="Icons/Shape_Icon_Oval.png">Oval</option>
+                </select>
+            </div>
+            <button id="selectionBtn"><img src="Icons/Icon_RectangularMarquee.png" alt="Rectangular Marquee"></button>
+            <button id="eraserBtn"><img src="Icons/Icon_Eraser.png" alt="Eraser"></button>
+            <button id="eyedropperBtn"><img src="Icons/Icon_EyeDropper.png" alt="Eyedropper"></button>
+            <button id="clearBtn">Clear</button>
+            <button id="undoBtn"><img src="Icons/Icon_Undo.png" alt="Undo"></button>
+            <button id="redoBtn"><img src="Icons/Icon_Redo.png" alt="Redo"></button>
+            <button id="saveBtn"><img src="Icons/Icon_Save.png" alt="Save"></button>
+            <input type="file" id="imageLoader" accept="image/*" style="display:none;">
+            <label for="imageLoader" class="imageLoaderBtn"><img src="Icons/Icon_Upload.png" alt="Upload"></label>
+            <label for="brushOpacity"><img src="Icons/Icon_Opacity.png" alt="Opacity" class="icon-label"></label>
+            <input type="range" id="brushOpacity" min="0" max="100" value="100">
+        </div>
+        <div class="canvas-wrapper">
+            <canvas id="paintCanvas" width="800" height="600"></canvas>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

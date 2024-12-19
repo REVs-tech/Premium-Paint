@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    background-color: #121212;
+    color: #d3d3d3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Logo Styles */
+.logo {
+    width: 400px; 
+    height: 200px;
+    display: block; 
+    margin: 0 auto 20px; /* Center the logo and add some space below */
+}
+
+.toolbar {
+    background-color: #282828;
+    padding: 3px; /* Reduced padding */
+    border-radius: 0;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 100%; 
+    height: 50px; /* Reduced height */
+    align-items: center; 
+}
+
+.toolbar button, .toolbar .select-wrapper, .toolbar .color-picker-container, .toolbar .imageLoaderBtn {
+    margin: 1px; /* Reduced margin */
+    background-color: #4a4a4a;
+    border: none;
+    padding: 1px; /* Reduced padding */
+    width: 40px; /* Reduced width */
+    height: 40px; /* Reduced height */
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8px; /* Smaller font size for any text */
+}
+
+.toolbar button:hover, .toolbar .select-wrapper:hover {
+    background-color: #555;
+}
+
+.toolbar button img, .toolbar .imageLoaderBtn img {
+    width: 25px; /* Reduced icon size */
+    height: 25px; /* Reduced icon size */
+}
+
+.toolbar input[type="range"] {
+    width: 35px; /* Reduced width */
+    height: 40px; /* Match height with other elements */
+}
+
+.toolbar .select-wrapper {
+    position: relative;
+}
+
+.toolbar select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #4a4a4a url('Icons/Shape_Icon_Square.png') no-repeat center; 
+    background-size: 20px 20px; /* Smaller icon */
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    text-align: center; 
+    color: #ffffff; 
+    font-weight: bold; 
+    font-size: 8px; /* Smaller text for dropdown */
+}
+
+.toolbar select option {
+    text-align: center; 
+    background-color: #4a4a4a;
+    color: #ffffff; 
+    font-weight: bold; 
+    font-size: 8px; /* Smaller text for dropdown options */
+}
+
+.toolbar select::after {
+    content: "▼";
+    position: absolute;
+    right: 2px; /* Adjusted position */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 6px; /* Smaller arrow */
+    pointer-events: none;
+}
+
+.toolbar option::before {
+    content: "";
+    display: inline-block;
+    width: 10px; /* Smaller icon */
+    height: 10px; /* Smaller icon */
+    margin-right: 3px; /* Reduced margin */
+    vertical-align: middle;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.toolbar option[value="circle"]::before { background-image: url('Icons/Shape_Icon_Circle.png'); }
+.toolbar option[value="rectangle"]::before { background-image: url('Icons/Shape_Icon_Square.png'); }
+.toolbar option[value="star"]::before { background-image: url('Icons/Shape_Icon_Star.png'); }
+.toolbar option[value="oval"]::before { background-image: url('Icons/Shape_Icon_Oval.png'); }
+
+.toolbar .color-picker-container {
+    width: 40px; /* Match new button size */
+    height: 40px; /* Match new button size */
+}
+
+#colorWheel {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; 
+    cursor: pointer;
+}
+
+.toolbar .imageLoaderBtn {
+    width: 40px; /* Match new button size */
+    height: 40px; /* Match new button size */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.toolbar .imageLoaderBtn img {
+    width: 25px; /* Match new icon size */
+    height: 25px; /* Match new icon size */
+}
+
+.toolbar .imageLoaderBtn::after {
+    content: "Upload"; 
+    font-size: 6px; /* Smaller text */
+    color: #ffffff;
+    margin-top: 1px; /* Reduced gap */
+}
+
+.toolbar button#clearBtn {
+    color: #ffffff; 
+    font-size: 8px; /* Smaller text for Clear button */
+}
+
+.toolbar label.icon-label img {
+    width: 10px; /* Smaller icon for labels */
+    height: 10px; /* Smaller icon for labels */
+    vertical-align: middle;
+}
+
+.canvas-wrapper {
+    border: 6px solid #0d6eec;
+    border-radius: 10px;
+    width: 800px;
+    height: 600px;
+    overflow: hidden;
+    background-color: #222;
+    box-shadow: inset 0 0 10px #000;
+}
+
+#paintCanvas {
+    width: 100%;
+    height: 100%;
+    background-color: #faf9f6;
+}
